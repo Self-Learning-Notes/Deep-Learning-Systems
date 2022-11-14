@@ -110,11 +110,16 @@ Standard method in convex optimization: initializing parameters to zero
 - Choice of initialization matters(initialize weights with $W_i \sim N(0, \sigma^2I)$)
 
   - The norm of the forward activations $Z_i$
+
   - The norm of the gradients $\nabla_{W_i} \ell(h_{\theta}(X),y)$
 
-  <img src="C:\Users\Steve\AppData\Roaming\Typora\typora-user-images\image-20221101204106840.png" alt="image-20221101204106840" style="zoom:80%;" />
+The variance of Gaussian random variables matter a lot. A deep network with poorly-chosen weights will never train.
 
--  weights often stay much closer to their initialization than to the “final” point after optimization from different
+![image-20221110231656256](C:\Users\Steve\AppData\Roaming\Typora\typora-user-images\image-20221110231656256.png)
+
+**Insights about choice of $\sigma^2$** from the above figure: $W_i \sim N(0,\frac{c}{n})$, where $c=2$
+
+
 
 Reference: 
 
