@@ -113,11 +113,11 @@ Standard method in convex optimization: initializing parameters to zero
 
   - The norm of the gradients $\nabla_{W_i} \ell(h_{\theta}(X),y)$
 
-The variance of Gaussian random variables matter a lot. A deep network with poorly-chosen weights will never train.
+The variance of Gaussian random variables matter a lot. A deep network with poorly-chosen weights will never train. The graph below shows a 50-layer deep network applying to MNIST (activation norm is $||Z_i||_{2}$ and gradient norm is $||\nabla_{W_i} \ell||_{2}$).
 
 ![image-20221110231656256](C:\Users\Steve\AppData\Roaming\Typora\typora-user-images\image-20221110231656256.png)
 
-**Insights about choice of $\sigma^2$** from the above figure: $W_i \sim N(0,\frac{c}{n})$, where $c=2$
+**Insights** about choice of $\sigma^2$ from the above figure: $W_i \sim N(0,\frac{c}{n})$, where $c=2$
 
 
 

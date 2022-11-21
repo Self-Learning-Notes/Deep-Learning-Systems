@@ -1,9 +1,12 @@
 # Deep-Learning-Systems
 [CMU10714 - Deep Learning Systems: Algorithms and Implementation](https://dlsyscourse.org/)
 
-**Learning Notes**
+**Implementation courses**
 
-
+- Lec5: automatic differentiation
+- Lec8: neural network library
+- Lec13: hardware acceleration
+- 
 
 **Homework Summary**
 
