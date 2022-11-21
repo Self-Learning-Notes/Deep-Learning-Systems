@@ -11,14 +11,17 @@
 **Homework Summary**
 
 - Hw0: prior knowledge review
-  <span style="color:blue">*cross-entropy loss, SGD, softmax regression, two-layer nn* </span>
+  - cross-entropy loss
+  - SGD
+  - softmax regression
+  - two-layer nn
   
 - Hw1: build a basic **automatic differentiation** framework
-
-  <span style="color:blue"> backprogation, topological sort, reverse mode differentiation, SGD for two-layer nn</span>
+  - backprogation
+  - topological sort
+  - reverse mode differentiation
 
 - Hw2: implement a **neural network library** in the needle framework
-
   - Weight initialization: Xavier and Kaiming
   - Modules: Linear, ReLu, Sequentail, LogSumExp, SoftmaxLoss, Normalizaiton(Layer/Batch), Flatten, Dropout, Residual
   - Optimizers: SGD, Adam
