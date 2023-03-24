@@ -3,10 +3,13 @@
 
 **Implementation courses**
 
-- Lec5: automatic differentiation
-- Lec8: neural network library
-- Lec13: hardware acceleration
-- 
+- Lec5: Automatic Differentiation
+- Lec8: Neural Network Library
+- Lec13: Hardware Acceleration
+- Lec14: Convolution Network Implementation
+- Lec17: Generative Adversarial Networks
+- Lec19: Recurrent Network
+- Lec21:Transformers
 
 **Homework Summary**
 
@@ -28,4 +31,6 @@
   - Data primitives: `Dataloader` and `Dataset`
   - Build and train MLP ResNet
 
+- Hw3: 
+  
   

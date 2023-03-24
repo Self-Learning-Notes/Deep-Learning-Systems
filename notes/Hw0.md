@@ -40,7 +40,9 @@ Write a loader that will read files of **MNIST formart** and return **numpy arra
 
 For a single training input $x \in \mathbb{R}^{n\times 1}$, matrix $\mathbf{\theta} \in \mathbb{R}^{k\times n}$ 
 
-- **Linear hypothesis function**: $h(x) = \theta^{T}x$
+where $n = \textbf{input_dim}$ and $k=\textbf{num_labels}$  
+
+- **Linear hypothesis function**: $h_i(x) = \theta_{i}^{T}x$
 - **Softmax function**: $z\equiv \text{normalize} (exp(h(x)))$
 
 $$
@@ -53,9 +55,7 @@ $$
 \ell_{ce}(h(x), y) = -\log p(label=y) = -h_y(x) + \log \sum_{j=1}^{d} exp(h_j(x))
 $$
 
-
-
-View of **Matrix batch notation** $X \in \mathbb{R}^{m \times n}$
+**Matrix batch notation** version $X \in \mathbb{R}^{m \times n}$
 
 - X - **design matrix**, $m= \textbf{num_examples}$,  $n = \textbf{input_dim}$ and $k=\textbf{num_labels}$ 
 

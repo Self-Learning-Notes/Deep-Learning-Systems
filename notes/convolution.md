@@ -179,5 +179,5 @@ Define $z = conv(x, W) \rightarrow$ partial adjoints $\bar{v} \frac{\partial \op
     
     \end{array}\right]
     $$
-    **Takeaway2**: $\quad \bar{v} \frac{\partial \operatorname{conv}(x, W)}{\partial W} \Rightarrow$ multiplying by the transpose of this x-based matrix, 
+    **Takeaway2**: $\quad \bar{v} \frac{\partial \operatorname{conv}(x, W)}{\partial W} \Rightarrow$ multiplying by the transpose of this x-based matrix. 
 
