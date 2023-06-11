@@ -31,6 +31,6 @@
   - Data primitives: `Dataloader` and `Dataset`
   - Build and train MLP ResNet
 
-- Hw3: 
+- Hw3: building an NDArray library
   
   

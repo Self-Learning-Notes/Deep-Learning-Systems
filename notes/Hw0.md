@@ -42,17 +42,17 @@ For a single training input $x \in \mathbb{R}^{n\times 1}$, matrix $\mathbf{\the
 
 where $n = \textbf{input_dim}$ and $k=\textbf{num_labels}$  
 
-- **Linear hypothesis function**: $h_i(x) = \theta_{i}^{T}x$
-- **Softmax function**: $z\equiv \text{normalize} (exp(h(x)))$
+- **Linear hypothesis function**: $h_\theta(x) = \theta^{T}x$
+- **Softmax function**: $z\equiv \text{normalize} (exp(h))$
 
 $$
-z_i= p(label=i)= \frac{\exp \left(h_i(x)\right)}{\sum_{j=1}^n \exp \left(h_j(x)\right)}
+z_i= p(label=i)= \frac{\exp \left(h_i(x)\right)}{\sum_{j=1}^k \exp \left(h_j(x)\right)}
 $$
 
 - The loss function: **cross-entropy loss**
 
 $$
-\ell_{ce}(h(x), y) = -\log p(label=y) = -h_y(x) + \log \sum_{j=1}^{d} exp(h_j(x))
+\ell_{ce}(h(x), y) = -\log p(label=y) = -h_y(x) + \log \sum_{j=1}^{k} exp(h_j(x))
 $$
 
 **Matrix batch notation** version $X \in \mathbb{R}^{m \times n}$
@@ -60,7 +60,7 @@ $$
 - X - **design matrix**, $m= \textbf{num_examples}$,  $n = \textbf{input_dim}$ and $k=\textbf{num_labels}$ 
 
 $$
-X =\left[\begin{array}{c}
+X \in \mathbb R^{m \times n} =\left[\begin{array}{c}
 -x^{(1)^T}- \\
 \vdots \\
 -x^{(m)^T}-
@@ -105,9 +105,9 @@ $$
 
 **Gradient Descent:** 
 
-For a matrix-input, scalar-output function $\mathcal{f}: \mathbb{R}^{n\times d} \rightarrow \mathbb{R}$, the gradient is defined as the matrix of **partial derivatives**.
+For a matrix-input, scalar-output function $\mathcal{f}: \mathbb{R}^{n\times k} \rightarrow \mathbb{R}$, the gradient is defined as the matrix of **partial derivatives**.
 $$
-\nabla_\theta f(\theta) \in \mathbb{R}^{n \times d}
+\nabla_\theta f(\theta) \in \mathbb{R}^{n \times k}
 $$
 
 where $(\nabla_\theta f(\theta))_{ij} = \frac{\partial f(\theta)}{\partial \theta_{ij}}$
@@ -121,8 +121,8 @@ Where $\alpha$ is a step size or learning rate.
 
 **Minibatch Stochastic Gradient Descent**                                                                                 
 
-Repeat:
-    Sample a **minibatch ** of data $X \in \mathbb{R}^{B \times d}, y \in\{1, \ldots, d\}^B$ 
+Repeat until loss converges
+    Sample a **minibatch ** of data $X \in \mathbb{R}^{B \times n}, y \in\{1, \ldots, k\}^B$ 
     Update parameters $\theta:=\theta-\frac{\alpha}{B}\sum_{i=1}^{B} \nabla_\theta \ell\left(h_\theta\left(x^{(i)}\right), y^{(i)}\right)$
 
 
@@ -148,7 +148,7 @@ $$
 \end{aligned}
 $$
 
-3. S0 to make the dimensions work... $\rightarrow$ outer product
+3. So to make the dimensions work... $\rightarrow$ outer product
 
 $$
 \nabla_\theta \ell_{c e}\left(\theta^T x, y\right) \in \mathbb{R}^{n \times k}=x\left(z-e_y\right)^T
@@ -159,7 +159,7 @@ $$
 $$
 ​		  $X \in \mathbb{R}^{m \times n} \text{ is the design matrix}$ 
 
-​		  $Z \in \mathbb{R}^{m \times k} =\text { normalize }(\exp (X \theta)) \quad \text{(normalization applied row-wise)}$ 
+​		  $Z \in \mathbb{R}^{m \times k} \equiv \text { normalize }(\exp (X \theta)) \quad \text{(normalization applied row-wise)}$ 
  		 $I_y \in \mathbb{R}^{m \times k} \text{ represents a concatenation of one-hot bases for the labels in $y$.}$ 
 
 ---
