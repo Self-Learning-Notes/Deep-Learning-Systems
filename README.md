@@ -22,7 +22,7 @@
 - Hw1: build a basic **automatic differentiation** framework
   - backprogation
   - topological sort
-  - reverse mode differentiation
+  - reverse mode automatic differentiation
 
 - Hw2: implement a **neural network library** in the needle framework
   - Weight initialization: Xavier and Kaiming
